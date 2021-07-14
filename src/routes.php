@@ -1,5 +1,5 @@
 <?php
 
 Route::get('/blog', function() {
-    return 'CECI FONCTIONNE';
+    return 'CECI FONCTIONNE !';
 });
