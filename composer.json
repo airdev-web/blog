@@ -1,0 +1,23 @@
+{
+    "name": "airdev/blog",
+    "description": "Blog for Airdev applications",
+    "autoload": {
+        "psr-4": {
+            "Airdev\\Blog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Romain Vause",
+            "email": "info@airdev.be"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Airdev\\Blog\\AirdevBlogProvider"
+            ]
+        }
+    }
+}
