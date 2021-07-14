@@ -2,7 +2,12 @@
 
 namespace Airdev\Blog;
 
+
+use Airdev\Blog\App\Nova\PostResource;
+use Airdev\Blog\App\Nova\UserResource;
+use Airdev\Blog\App\Nova\WebMediaResource;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Nova\Nova;
 
 class AirdevBlogProvider extends ServiceProvider
 {
@@ -23,6 +28,13 @@ class AirdevBlogProvider extends ServiceProvider
      */
     public function boot()
     {
-        include __DIR__.'/routes.php';
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
+        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+
+        Nova::resources([
+            WebMediaResource::class,
+            PostResource::class,
+            config('blog.user-nova-resource', UserResource::class),
+        ]);
     }
 }

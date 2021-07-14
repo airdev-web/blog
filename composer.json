@@ -12,7 +12,14 @@
             "email": "info@airdev.be"
         }
     ],
-    "require": {},
+    "require": {
+        "spatie/laravel-medialibrary": "^9.0.0",
+        "simplesquid/nova-advanced-number-field": "^2.0",
+        "khalin/nova-link-field": "^1.2",
+        "kraftbit/nova-tinymce5-editor": "^1.0",
+        "ebess/advanced-nova-media-library": "^3.6",
+        "eminiarts/nova-tabs": "^1.4"
+    },
     "extra": {
         "laravel": {
             "providers": [
