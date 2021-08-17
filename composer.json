@@ -21,7 +21,7 @@
         "kraftbit/nova-tinymce5-editor": "^1.0",
         "ebess/advanced-nova-media-library": "^3.6",
         "eminiarts/nova-tabs": "^1.4",
-        "airdev/medias": "^1.2"
+        "airdev/medias": "^v1.3"
     },
     "extra": {
         "laravel": {
