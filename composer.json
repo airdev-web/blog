@@ -13,12 +13,15 @@
         }
     ],
     "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.0.0",
         "spatie/laravel-medialibrary": "^9.0.0",
         "simplesquid/nova-advanced-number-field": "^2.0",
         "khalin/nova-link-field": "^1.2",
         "kraftbit/nova-tinymce5-editor": "^1.0",
         "ebess/advanced-nova-media-library": "^3.6",
-        "eminiarts/nova-tabs": "^1.4"
+        "eminiarts/nova-tabs": "^1.4",
+        "airdev/medias": "^1.2"
     },
     "extra": {
         "laravel": {

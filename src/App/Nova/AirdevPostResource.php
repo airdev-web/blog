@@ -2,7 +2,7 @@
 
 namespace Airdev\Blog\App\Nova;
 
-use Airdev\Blog\App\Models\Post;
+use Airdev\Blog\App\Models\AirdevPost;
 use Carbon\Carbon;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Files;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
@@ -22,11 +22,11 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Resource;
 
-class PostResource extends Resource
+class AirdevPostResource extends Resource
 {
     use TabsOnEdit;
 
-    public static $model = Post::class;
+    public static $model = AirdevPost::class;
 
     public static $title = 'id';
 
@@ -52,7 +52,7 @@ class PostResource extends Resource
 
                     Link::make('Prévisualisation', 'id')
                         ->url(function() {
-                            return route('blog.post', ['slug' => $this->slug ?: '/xxx', 'preview' => 'true']);
+                            return config('blog.blog-preview-route', '/blog') . '/' . $this->slug . '?preview=true';
                         })
                         ->text('Prévisualiser')
                         ->icon()
