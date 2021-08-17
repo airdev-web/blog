@@ -19,7 +19,7 @@ class AirdevPostController extends Controller
     {
         $posts = AirdevPost::where('is_active', true)
             ->whereDate('publish_date', '<=', Carbon::today())
-            ->orderBy('created_at', 'desc')
+            ->orderBy('publish_date', 'desc')
             ->with('author');
 
         // If asked, take the required number of posts
