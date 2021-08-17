@@ -22,10 +22,20 @@ php artisan vendor:publish --tag=airdev-blog-migrations
 php artisan migrate
 ```
 
-Then, publish config file :
+Publish the TiniMCE config file :
+```shell
+php artisan vendor:publish --provider="Kraftbit\NovaTinymce5Editor\FieldServiceProvider"
+```
+Add your TinyMCE cloud API key here or to your .env file like this :
+```env
+TINYMCE_API_KEY=your-key-here
+```
+Then, publish airdev/blog config file :
 ```shell
 php artisan vendor:publish --tag=airdev-blog-config
 ```
+
+
 
 You can now edit some configuration.
 ```php
