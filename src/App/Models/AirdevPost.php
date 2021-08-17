@@ -43,7 +43,12 @@ class AirdevPost extends Model implements HasMedia
 
     public function getIntroAttribute()
     {
-        return Str::limit(strip_tags($this->title_intro), config('blog.blog_intro_limit', 200));
+        $limit = config('blog.blog_intro_limit', 200);
+
+        if ($limit == null)
+            return strip_tags($this->title_intro);
+
+        return Str::limit(strip_tags($this->title_intro), $limit);
     }
 
     public function getIsPublishableAttribute()

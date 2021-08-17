@@ -9,5 +9,6 @@ return [
     'blog-preview-route' => '/blog',
 
     // Str::limit to shorten the intro text
+    // If set to 'null', it will not short it
     'blog_intro_limit' => 200,
 ];
